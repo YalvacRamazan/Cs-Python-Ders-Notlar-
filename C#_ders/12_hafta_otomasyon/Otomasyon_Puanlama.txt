@@ -1,0 +1,39 @@
+1)SQL Tarafında en az 3 adet tablo oluşturacaksınız.
+
+2)Tabloların tamamı birbiriyle ilişkili olacak
+(Boşta kalan bir tablo olmayacak)
+
+3) C# tarafında EntityFramework konseptinde
+SQL tarafındaki tüm tablolarınızı burada birer sınıf
+olarak yazacaksınız.
+
+4) Bu sınıfların her birinde, hangi tablo hangi tabloyla
+ilişkiliyse, C# tarafında da sınıf yazarken bu ilişkiyi
+(one-to-many ya da many-to-one kapsamında) belirteceksiniz
+(Örneğin public virtual ICollection<Product> Products {get; set;}
+( ya da public virtual Product Products {get; set;} gibi)
+
+5) Tüm tablolar için bir tane ContextDb sınıfı yazacaksınız ve
+bütün tabloları burada DbSet nesnesi olarak tanıtacaksınız
+
+6) C# tarafında en az bir müstakil tablo (tekil tablo,
+örneğin; sadece müşteriler ya da sadece ürünler gibi),
+bir adet de en az iki tablonun birlikte kullanıldığı ve
+işleme sokulduğu aracı bir tablo için DbContext işlemlerini
+yapacaksınız (Örneğin; CustomerProduct gibi)
+Bu işlemler, tek bir müstakil tablo için 4 temel veri tabanı
+işlemi olacak ve birden fazla tablonun işleme sokulduğu
+tablolar için de 3 temel işlem olacak (güncelleme olmayacak)
+
+7) Özellikle, birden fazla tablonun işleme sokulduğu
+tablo için en az iki adet LINQ sorgusu yazacaksınız.
+Bunları ister radio button ile ister checkbox ile gösterin,
+sonuçlarını da label ya da başka bir değişkene yazdırın
+
+8) Tanımladığınız ve gerçekte SQL tarafındaki her bir
+tabloya karşılık gelen her bir sınıf için UML diyagramları
+oluşturacaksınız.
+
+Hazır oluşturmak isteyenler için örnek video url'si:
+https://www.youtube.com/watch?v=FnOR--bKdi8&ab_channel=Quickz
+

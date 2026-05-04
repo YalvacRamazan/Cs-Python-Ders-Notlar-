@@ -1,0 +1,112 @@
+1) Öncelikle C# tarafında windows form projesi oluşturun (.Net Framework) olacak
+
+2) Formdaki bileşenler:
+	1 adet datagridview
+	4 adet buton (listele, ekle, sil, güncelle)
+	4 adet Label (kayıt eklemek için-bilgi girilmesi gereken alanların adını yazar)
+	4 adet textbox (bilgi girmek için bileşenler)
+
+3) Projemize sağ tıklayıp Manage NuGet Package (NuGet Paketlerini Yönet) seçeneğini
+tıklıyoruz. Bunu, EntityFramework'ü projemize indirmek için yapacağız.
+
+4) Şimdi Projede sağ tarafta App.config dosyası içerisine connectionstring
+bilgimizi dahil etmeliyiz ki veri tabanımız, proje tarafından tanınsın
+
+<connectionStrings>
+  <add name="CustomerDbContext" 
+       connectionString="Data Source=DESKTOP-7DAR20I\SQLEXPRESS;Initial Catalog=Otomasyon_Ybs2b;Integrated Security=True" 
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+5) Projemize sağ tıklayıp Add-Class ya da Ekle->Sınıf seçeneğini tıklıyoruz
+Bu örnek proje için Table_Customer tablosuna karşılık gelsin (akılda kalsın diye)
+bu class'a Customer adını veriyoruz.
+
+6) Class'ımızı eklediğimiz projeye using kodlarının olduğu yere
+aşağıdaki 2 satırı ekliyoruz:
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+NOT: Class varsayılan olarak internal erişim belirteciyle oluşacak. Siz onu
+public yapın.
+
+7) Customer.cs tarafında (yani ilk eklediğimiz class tarafında)
+Table_Customer tablosunun sütunlarını birer property olarak çıkardık
+
+Şimdi de onların girilmesi zorunlu mu değil mi özelliğini tanımlayacağız
+aynı zamanda string olanlar için de karakter sınırını belirteceğiz.
+
+Table_Customer sınıfı için oluşturduğumuz kodların tamamı aşağıdadır:
+
+[Table("Table_Customer")]
+public class Customer
+{
+    [Key]
+    public int Customer_Id { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string Customer_Name { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string Customer_Surname { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string Customer_Email { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string Customer_Telephone { get; set; }
+
+}
+
+8) App.config içerisine verdiğiniz connectionstring etiketlerindeki
+name bilgisinde yer alan değer için bir class oluşturmanız gerekli
+(Entity Framework kapsamı için, tablomuza ait bir sınıf oluşturduktan sonra
+veri tabanı işlemlerini yapması ve her defasında bir constructor üretmesi için
+bu işlemi gerçekleştirmemiz lazım)
+
+9) bu isimdeki class'ı ekledikten sonra ilk olarak yine using blokları içerisine
+aşağıdaki import etme işlemini gerçekleştiriyoruz.
+
+
+
+
+
+15) Update işlemi öncesinde seçilen satırların ilgili textbox'lara aktarılmasını
+sağlayan kod:
+
+if (e.RowIndex >= 0) // bir hücre seçildiyse demenin if sorgusu
+{
+    txt_isim.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Name"].Value.ToString();
+    txt_soyisim.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Surname"].Value.ToString();
+    txt_mail.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Email"].Value.ToString();
+    txt_telefon.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Telephone"].Value.ToString();
+}
+
+16) Update işlemi kodları:
+
+if (dataGridView1.CurrentRow != null)
+{
+    int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Customer_Id"].Value);
+    Customer customer = db.Customers.Find(selectedId);
+
+    if (customer != null)
+    {
+        customer.Customer_Name = txt_isim.Text;
+        customer.Customer_Surname = txt_soyisim.Text;
+        customer.Customer_Email = txt_mail.Text;
+        customer.Customer_Telephone = txt_telefon.Text;
+
+        db.SaveChanges();
+
+        MessageBox.Show("Kayıt Güncellendi!");
+
+        btn_listele.PerformClick();
+    }
+}
+
+
+
