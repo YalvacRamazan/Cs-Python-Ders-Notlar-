@@ -4,4 +4,4 @@
 Nesnesel Tabanli Programlama & Python Programlama
 ```
 
-Dersin Hocası [FurkanATLAN](https://github.com/furkanatlan/)
+Dersin Hocası ve Örnek Otomasyon Reposu [FurkanATLAN](https://github.com/furkanatlan/my_automation_example)
