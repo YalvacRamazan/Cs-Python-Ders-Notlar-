@@ -4,4 +4,4 @@
 Nesnesel Tasarim ve Programlama & Python Programlama
 ```
 
-@furkanatlan
+Dersin Hocası [FurkanATLAN](https://github.com/furkanatlan/)
