@@ -6,4 +6,4 @@ Nesnesel Tabanli Programlama & Python Programlama
 
 Dersin Hocası ve Örnek Otomasyon Reposu [FurkanATLAN](https://github.com/furkanatlan/my_automation_example)
 
-Son Ders [VibeCodeing](https://github.com/furkanatlan/My_Automation_Project_Example_with_EF/tree/master)
+Son Ders [VibeCoding](https://github.com/furkanatlan/My_Automation_Project_Example_with_EF/tree/master)
