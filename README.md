@@ -8,6 +8,7 @@ Nesnesel Tabanli Programlama & Python Programlama
   <img src="https://img.shields.io/badge/Entity_Framework-Automation_Example-5C2D91?style=flat-square&logo=dotnet" alt="EF Example">
 </a>
 
+
 ```bash
 Otomasyon Projesi ' 4 Haziran '  teslim edilecek.
 ```
