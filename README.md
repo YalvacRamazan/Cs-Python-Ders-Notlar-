@@ -16,5 +16,5 @@ Otomasyon Projesi ' 4 Haziran '  teslim edilecek.
 Yoklama Sirasinda Gore Cagrilacak ve sabah ' 8.30' ,
 
 Resmi olmayan kaynaga gore de python programlama dersinin oldugu ' 9.25 ' ,
-de orada bulunmaniz tavsiye edilir.
+te orada bulunmaniz tavsiye edilir.
 ```
