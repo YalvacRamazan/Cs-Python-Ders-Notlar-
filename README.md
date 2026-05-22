@@ -12,5 +12,7 @@ Son Ders [VibeCoding](https://github.com/furkanatlan/My_Automation_Project_Examp
 Otomasyon Projesi ' 4 Haziran '  teslim edilecek.
 ```
 ```bash
-Yoklama Sirasinda Gore Cagrilacak ve sabah 8.30, resmi olmayan kaynaga gore de python programlama dersinin olgugu 9.25 de orada bulunmaniz tavsiye edilir.
+Yoklama Sirasinda Gore Cagrilacak ve sabah ' 8.30' ,
+
+Resmi olmayan kaynaga gore de python programlama dersinin oldugu ' 9.25 '  de orada bulunmaniz tavsiye edilir.
 ```
