@@ -1,0 +1,11 @@
+# Projeyi Analiz et ve buna uygun olarak aşağıdaki parametrelere uygun README.md dosyasını projenin github a yüklendiğinde konulacağı dizine ekle.
+
+## README_ŞEMASI
+ - Projenin Adı,
+ - Projede kullanılan teknolojilerin badge'leri,
+ - Projenin Amacı,
+ - Sistem mimarisinin UML Diagramı olarak gösterimi,
+ - Teknoloji yığınının hazırlanması,
+ - Veritabanı tablolarının ve ilişkilerinin UML Diagramı olarak gösterilmesi,
+ - Projenin Kurulumu ve Kullanımı hakkında Kısa bilgilendirme,
+ - Repo Sahibinin Bilgileri
