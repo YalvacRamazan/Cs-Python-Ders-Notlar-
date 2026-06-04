@@ -12,9 +12,4 @@ Nesnesel Tabanli Programlama & Python Programlama
 ```bash
 Otomasyon Projesi ' 4 Haziran '  teslim edilecek.
 ```
-```bash
-Yoklama Sirasinda Gore Cagrilacak ve sabah ' 8.30' ,
 
-Resmi olmayan kaynaga gore de python programlama dersinin oldugu ' 9.25 ' ,
-te orada bulunmaniz tavsiye edilir.
-```
