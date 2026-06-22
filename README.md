@@ -1,4 +1,11 @@
 ## Python Programalama & Nesnesel Tabanlı Programlama Ders Notları
+
+### Büt ile İlgili Çalışma Sorularının Çözümleri
+[Kod](https://github.com/YalvacRamazan/Cs-Python-Ders-Notlar-/blob/main/Python_dersler/Pyhton.ipynb)
+
+
+
+
 ```python
 Konular = {
   "Vize": "Dahil",
